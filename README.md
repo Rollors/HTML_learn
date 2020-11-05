@@ -67,3 +67,17 @@ Javascript 从交互角度，提升用户体验
             *   单选框、复选框 `<input type="radio/checkbox" value="值" name="名称" checked="checked" />` --radio单选、CheckBox复选、value表示提交到后端的数据、name表示当前这一项的名称、checked表示是否默认被选择；单选时，name要一致
             *   下拉 `    <select><option selected="selected"></option></select>` --为节省页面空间;selected="selected"表示被选中的；
             *   文本域 `<textarea name="" id="" cols="30" rows="10"></textarea>` --rows表示行；cols表示列数；
+#CSS样式
+*   CSS概述
+    *   层叠样式表(CSS):随着技术的发展，将网页的内容与样式相分离，便于修改，相同的内容可以给予不同的样式；
+*   CSS语法
+    *   `p{ 
+    font-size:12px;
+    color:blue;
+    font-weight:bold;
+}` --p为选择器、花括号里面：左边是属性名，右边是属性值；最后一条声明可以没有分号。
+*   CSS添加方法
+    *   行内 --`<p style="color:red;">天使投资指早期投资，尤其指个人早期投资。</p>`
+    *   内嵌 --添加到`<head>p{font-size:12px; /*字号*/color:blue;     /* 颜色*/font-weight:bold;/*粗细*/}</style></head>` 内嵌只对单个页面有效，需要重新定义。
+    *   链接样式 --`<head><link rel="stylesheet" href="css/style.css/><head/>` 内容与样式完全分离，维护方便，如果需要修改网页风格只需要修改样式文件
+    *   优先级 --行内样式>内嵌>链接样式
