@@ -67,7 +67,8 @@ Javascript 从交互角度，提升用户体验
             *   单选框、复选框 `<input type="radio/checkbox" value="值" name="名称" checked="checked" />` --radio单选、CheckBox复选、value表示提交到后端的数据、name表示当前这一项的名称、checked表示是否默认被选择；单选时，name要一致
             *   下拉 `    <select><option selected="selected"></option></select>` --为节省页面空间;selected="selected"表示被选中的；
             *   文本域 `<textarea name="" id="" cols="30" rows="10"></textarea>` --rows表示行；cols表示列数；
-#CSS样式
+***
+#CSS样式 --父层的样式被子层继承
 *   CSS概述
     *   层叠样式表(CSS):随着技术的发展，将网页的内容与样式相分离，便于修改，相同的内容可以给予不同的样式；
 *   CSS语法
@@ -77,7 +78,34 @@ Javascript 从交互角度，提升用户体验
     font-weight:bold;
 }` --p为选择器、花括号里面：左边是属性名，右边是属性值；最后一条声明可以没有分号。
 *   CSS添加方法
-    *   行内 --`<p style="color:red;">天使投资指早期投资，尤其指个人早期投资。</p>`
+    *   行内 --`<p style="color:``red;">天使投资指早期投资，尤其指个人早期投资。</p>`
     *   内嵌 --添加到`<head>p{font-size:12px; /*字号*/color:blue;     /* 颜色*/font-weight:bold;/*粗细*/}</style></head>` 内嵌只对单个页面有效，需要重新定义。
     *   链接样式 --`<head><link rel="stylesheet" href="css/style.css/><head/>` 内容与样式完全分离，维护方便，如果需要修改网页风格只需要修改样式文件
     *   优先级 --行内样式>内嵌>链接样式
+*   CSS选择器
+    *   标签选择器 --使用HTML标签
+    *   类别选择器 --标签内部的class属性如`.class` 类别可以引用多次
+    *   ID选择器 --标签内部的ID属性如`#ID` ID只能被引用一次
+    *   嵌套声明 --标签之间的嵌套如`p span{}`空格分隔
+    *   集体声明 --多个标签一起声明如`p,span{}`逗号分隔
+    *   全局声明 --如`*{}`
+*   CSS样式
+    *   文本
+        *   单位与颜色
+            *   px --像素
+            *   em --字符`1em表示1个字符` 自动适应用户所使用的的字体
+            *   % --百分比 由继承来的样式来决定，占百分之多少
+            *   颜色 --RGB取值如`rgb(x,x,x)` or 十六进制数如`#ff0000` or `rgba(x,x,x,a)` or `red blue green` or `rgb(x%,x%,x%)`
+        *   text
+            *   color --文本颜色
+            *   letter-spacing --字符间距
+            *   line-height --行高
+            *   text-align --对齐
+            *   text-decoration --装饰线
+            *   text-indent --首行缩进
+        *   font
+            *   font --在一个声明中设置左右的字体属性
+            *   font-family --字体系列
+            *   font-size --字号
+            *   font-style --字体风格
+            *   font-weight --粗体
