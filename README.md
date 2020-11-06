@@ -51,7 +51,7 @@ Javascript 从交互角度，提升用户体验
             *   相对路径 --以该文档所在位置为基准：如HMTL文件下的test.html插入图片：src为mm.jpg
             *   当图片路径为site/mm.jpg与.html文件的路径为site/c/j.html，则src为../mm.jpg
             *   当图片路径为site/image/mm.jpg与.html文件的路径为site/c/j.html，则src为../image/mm.jpg
-    *   div
+    *   div`会独占一行`
         *   区域div --页面划分为各个区域，成对使用，属性align,结合CSS样式分别定义样式,id属性唯一
     *   ul、ol、li
         *   无序列表，ul
@@ -109,3 +109,58 @@ Javascript 从交互角度，提升用户体验
             *   font-size --字号
             *   font-style --字体风格
             *   font-weight --粗体
+    *   背景
+        *   background 
+        *   background-color --背景颜色
+        *   background-image --背景图片`url("log.jpg")` 会覆盖背景颜色
+        *   background-repeat --背景图片重复填充方式 棋盘格填充，在水平和垂直两个方向填充；横向填充`repeat-x` 纵向填充`repeat-y` 背景图片只出现一次`no-repeat`
+    *   超链接四种状态`:伪类选择器`
+        *   a:link --普通的、未被访问的链接
+        *   a:visited --用户已访问的链接
+        *   a:hover --鼠标指针位于链接上方悬停
+        *   a:active --链接被点击的时刻 激活
+        *   四种状态设置顺序 --`a:link,a:visited>a:hover>a:active`
+    *   列表样式`无序列表ul 有序列表ol 共用样式`
+        *   list-style --所有用于列表的属性设置在一个声明中
+        *   list-style-imae --为列表项标志设置图像
+        *   list-style-position --标志的位置
+        *   list-style-type --标志的类型 
+    *   表格样式`奇偶选择器 tr:nth-child(odd|even) nth-child表示第n个子元素 括号里表奇偶行`
+        *   表格大小`width height`
+        *   表格边框`border border-collapse`
+*   CSS页面布局与定位
+    *   外层 --container
+    *   上层 --header
+    *   导航条 --main`navbar menu content sidebar`
+    *   下层 --footer
+    *   盒子模型`页面上的区域、图片、导航、列表、段落度可以看做是一个盒子`
+        *   盒子模型组成
+            *   content --内容
+            *   height --高度
+            *   width --宽度
+            *   border --边框 具有四个方向
+            *   padding --内边距 内容到边框之间的距离 具有四个方向
+            *   margin --外边距 border之外的间距 具有四个方向
+            *   text-align --图片文字居中
+            *   除了内容，全是属性的名字即CSS样式 
+        *   内容溢出`overflow`
+            *   hidden --超出部分不可见
+            *   scroll --显示滚动条
+            *   auto --如果有超出部分，显示滚动条
+        *   border
+            *   border-width --边框宽度`px thin medium thick`
+            *   border-style --边框风格 虚线、实线`dashed dotted solid double`
+            *   border-color --颜色`red `
+            *   border --`width style color`
+        *   padding和margin`对浏览器默认设置清零`
+            *   top --如`padding-top margin-top`
+            *   left
+            *   right
+            *   bottom
+            *   `margin:1px 1px 1px 1px`对应以上四个方向上、右、下、左;上下相对、左右相对
+            *   margin的合并 --垂直方向合并，水平方向不合并；选择两个盒子外边距大的作为两个盒子的间距；
+            *   margin设置div居中`margin:0 auto`浏览器自动计算，因为水平方向为auto
+    *   定位机制
+        *   文档流
+        *   浮动定位
+        *   层定位
