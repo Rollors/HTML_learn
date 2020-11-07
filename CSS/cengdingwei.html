@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层定位</title>
+    <style type="text/css">
+        #fix-box{
+            width: 200px;
+            height: 200px;
+            /*border: 1px solid red;*/
+            position: relative;
+            left: 100px;
+            top: 50px;
+
+        }
+        #fix-box #box{
+            width: 170px;
+            height: 170px;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fix-box">
+        <img src="../HTML/image/timg.jpg" alt="">
+        <div id="box">好看啊</div>
+    </div>
+
+</body>
+</html>

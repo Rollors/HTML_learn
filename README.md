@@ -161,6 +161,26 @@ Javascript 从交互角度，提升用户体验
             *   margin的合并 --垂直方向合并，水平方向不合并；选择两个盒子外边距大的作为两个盒子的间距；
             *   margin设置div居中`margin:0 auto`浏览器自动计算，因为水平方向为auto
     *   定位机制
-        *   文档流
-        *   浮动定位
-        *   层定位
+        *   概述 --找到盒子模型在页面中的位置
+        *   文档流 --从上到下，从左到右依次排列，默认方式
+            *   元素分类 --`block inline inline-block` 
+                *   block属性独占一行，元素高、宽、外边距以及内边距度可以设置 --如`div p h1 h2...h6 ol ul table form`通常用于页面布局，a标签不在其中，可以通过display:block转换为块状元素
+                *   inline不单独占一行，高以及宽不可以设置，宽就是他包含文字或图片的宽度，不可改变;如`a span`;除此之外，可用display:inline转换为inline显示;inline元素间有默认间距
+                *   inline-block不单独占一行，可以设置高、宽、外边距以及内边距如`img`;可用display:inline-block来转换元素;
+            *   元素类型转换 --`display`
+        *   浮动定位`float` --改变盒子排列，可以有左浮动和右浮动
+            *   float属性`right left none` --图文混排以及多列布局时可以用到;当设定float时，盒子脱离文档流，位置被其他盒子占据;
+            *   clear属性`both left right none` --both清楚左右两侧浮动即不能存在浮动元素，如果有要另起一行;left则是左侧;right是右侧;
+        *   层定位`position` --上一层盒子覆盖下一层 相对于谁定位`top是盒子距离上面的距离，同理left、right、bottom，z-index谁大谁在上面`
+            *   fixed --固定定位`相对于浏览器窗口进行定位 以浏览器左顶点为原点(0,0)`
+            *   relative --相对定位`相对于直接父元素进行定位`
+            *   absolute --绝对定位`相对于static定位以外的第一个父元素进行定位 relative/absolute/body定位`
+            *   static --当前元素在文档流中，没有定位
+    *   border-radius --圆角边框`设置两个值：水平方向 垂直方向`
+        *   border-top-left-radius --左上角形状
+        *   border-top-right-radius --右上角形状
+        *   border-bottom-left-radius --左下角形状
+        *   border-bottom-right-radius --右下角形状
+    *   box-shadow --盒子阴影
+        *   inset --水平偏移 垂直偏移 模糊距离 颜色;内部阴影
+        *   outset --默认值 外部阴影

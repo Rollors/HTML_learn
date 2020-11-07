@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面布局二列</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 14px;
+        }
+        #container{
+            width: 1000px;
+            /*height: 500px;*/
+            margin: 0 auto;
+            /*background-color: aqua;*/
+        }
+        #aside{
+            float: left;
+            width: 300px;
+            height: 500px;
+            background-color: orange;
+        }
+        #content{
+            float: right;
+            width: 700px;
+            height: 500px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="aside"></div>
+        <div id="content"></div>
+    </div>
+</body>
+</html>
