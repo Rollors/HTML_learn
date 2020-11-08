@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    color: #673929;
+}
+
+#container{
+    width: 900px;
+    margin: 0 auto;
+}
+
+#header{
+    height: 220px;
+    margin-bottom: 5px;
+}
+#header img{
+    height: 220px;
+    width: 900px;
+}
+#nav{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #09c;
+    font-family: Dialog;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#nav a{
+    text-decoration: none;
+}
+
+#nav a:link{
+    color: #fff;
+}
+
+#nav a:link{
+    color: #fff;
+}
+
+#nav a:hover{
+    color: yellow;
+}
+
+#nav a:active{
+    color: yellow;
+}
+
+#main{
+    background-color: black;
+    /*height: 2050px;*/
+}
+
+#aside{
+    float: left;
+    width: 300px;
+    height: 619px;
+    background-color: #6cf;
+    text-align: center;
+    font-size: 14px;
+
+}
+
+#aside .cff_menu{
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: black;
+    font-family: "Agency FB";
+    font-weight: bolder;
+    margin: 10px auto;
+}
+
+#aside .table_cff{
+    color: black;
+}
+
+#aside .table_cff th{
+    font-weight: bold;
+}
+
+#aside .coffe{
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#aside .coffe img{
+    width: 150px;
+    height: 100px;
+}
+
+#aside .a{
+
+    transform: rotate(5deg);
+}
+
+#aside .b{
+    transform: rotate(-5deg);
+}
+
+#aside .c{
+    transform: rotate(5deg);
+}
+
+#aside .d{
+    transform: rotate(-5deg);
+}
+
+#content{
+    float: right;
+    width: 595px;
+    margin-bottom: 5px;
+    /*margin-left: 5px;*/
+    background-color: #cff;
+}
+
+#content .subcon{
+    width: 570px;
+    margin: 10px auto;
+    clear: both;
+}
+
+#content .subcon img{
+    width: 100px;
+    height: 130px;
+    margin: 5px;
+    padding: 5px;
+    float: left;
+    border: 1px black dashed;
+}
+
+#content .subcon .suntext{
+    width: 60%;
+    float: left;
+    margin: 5px;
+}
+
+#content .subcon .suntext h2{
+    margin: 5px;
+}
+
+#content .subcon .suntext p{
+    font-family: "Century Gothic";
+}
+
+#footer{
+    height: 60px;
+    line-height: 60px;
+    background-color: #6cf;
+    clear: both;
+    text-align: center;
+}
+

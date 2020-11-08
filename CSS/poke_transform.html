@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>poke_transform</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: darkblue;
+        }
+        #pic{
+            width: 760px;
+            height: 220px;
+            margin: 100px auto;
+            perspective: 1000px;
+        }
+        .picbox{
+            float: left;
+            width: 170px;
+            height: 190px;
+            margin: 10px;
+            transform-style: preserve-3d;
+            transition: 1.5s;
+        }
+        .picbox:hover{
+            transform:rotateY(180deg);
+        }
+
+        .face{
+            width: 170px;
+            height: 190px;
+            position: absolute; /*两个div的层定位随父节点，因此在一起*/
+        }
+        .front{
+            border: 2px solid #4b2518;
+        }
+        img{
+            width: 170px;
+            height: 190px;
+        }
+        .back{
+            transform: rotateY(180deg);/*让背面先转过去，与图片形成背靠背形式*/
+            background-color: #4b2518;
+            border: 2px solid #fff;
+
+        }
+        .back h3{
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="pic">
+        <div class="picbox">
+            <div class="face front"><img src="../HTML/image/timg.jpg" alt=""></div>
+            <div class="face back">
+                <h3>风景好看</h3>
+            </div>
+        </div>
+        <div class="picbox">
+            <div class="face front"><img src="../HTML/image/a2e8c86861b5a4f17711254f4d20d224.jpg" alt=""></div>
+            <div class="face back">
+                <h3>专业团队</h3>
+            </div>
+        </div>
+        <div class="picbox">
+            <div class="face front"><img src="../HTML/image/1aa82e824cd10f7edcb5c82b8777e643.jpg" alt=""></div>
+            <div class="face back">
+                <h3>请坐</h3>
+            </div>
+        </div>
+        <div class="picbox">
+            <div class="face front"><img src="../HTML/image/v2-12531fa065a623550d942890aecb3504_720w.jpg" alt=""></div>
+            <div class="face back">
+                <h3>英明</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

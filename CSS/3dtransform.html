@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #stage{
+            width: 1515px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+        .boy{
+            float: left;
+            margin-left: 5px;
+            width: 500px;
+            height: 200px;
+            transition: linear 1s;
+            transform-style: preserve-3d;
+        }
+        img{
+
+            width: 500px;
+            height: 200px;
+        }
+        .x:hover{
+            transform: rotateX(180deg);
+        }
+        .y:hover{
+            transform: rotateY(180deg);
+        }
+        .z:hover{
+            transform: rotateZ(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="stage">
+        <div class="boy x"><img src="../HTML/image/timg.jpg" alt=""></div>
+        <div class="boy y"><img src="../HTML/image/timg.jpg" alt=""></div>
+        <div class="boy z"><img src="../HTML/image/timg.jpg" alt=""></div>
+    </div>
+</body>
+</html>

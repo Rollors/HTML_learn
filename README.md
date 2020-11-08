@@ -1,4 +1,4 @@
-# HTML_learndas
+# HTML_learn
 HTML语言描述页面结构  
 CSS 美化页面  
 Javascript 从交互角度，提升用户体验  
@@ -184,3 +184,33 @@ Javascript 从交互角度，提升用户体验
     *   box-shadow --盒子阴影
         *   inset --水平偏移 垂直偏移 模糊距离 颜色;内部阴影
         *   outset --默认值 外部阴影
+    *   文本与文字
+        *   text-shadow --水平偏移 垂直偏移 阴影大小 颜色 两个效果：文字描边与浮雕效果
+        *   word-wrap --normal break-word:允许长单词、URL强制进行换行
+        *   @font-face --定义字体，让用户从服务器下载网页所需要的特殊字体;`@fonts-face{font-family:kastlerFont;
+        src:url('./fonts/kastler.ttf'),url('./fonts/kastler.eot')}同样从fonts文件夹里引用对不同浏览器适应的字体`
+    *   2D变换 `transform` 平面上对元素进行旋转、缩放、移动、拉伸
+        *   rotate(xdeg) --旋转 x为正数则顺时针旋转
+        *   scale(x,y) --缩放 x为水平方向缩放倍数 y为垂直方向缩放倍数 若省略，则与x同 0-1缩小 >1放大
+    *   过渡效果 `transition` 使元素的某个属性从一个值在指定时间内过渡到另一个值
+        *   transition-property --属性名 or all 对哪个属性进行变化 多个属性逗号隔开
+        *   transition-duration --持续时间 
+        *   transition-timing-function --过渡使用的方法(函数) `linear ease ease-in ease-out ease-in-out`分别是匀速、慢快慢、慢快、快慢、慢快慢
+        *   transition-delay
+    *   动画 `@keyframes`
+        *   animation的属性如下
+            *   定义动画 --`@keyframes`规则 将一组静态的图片连接起来，每一幅图片都是keyframe
+            *   animation-name --引用动画的名字 自己用`@keyframes`定义动画
+            *   animation-duration --持续时间
+            *   animation-function --动画速度曲线 与过渡效果的函数一致
+            *   animation-paly-state --running or pause 当前动画播放的状态
+    *   3D变换
+        *   transform-style:preserve-3d
+            *   rotateX()
+            *   rotateY()
+            *   rotateZ()
+        *   透视属性`persective`
+            *   像素值越小，离舞台越远，反之;
+        *   内容、父容器、舞台
+            *   父容器 --内容旋转`transform-style:preserve-3d and transform:rotateY(60deg)`
+            *   舞台 --内容透视`perspective:100px`

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D变换</title>
+    <style type="text/css">
+        @keyframes mycolor {
+            0% {background-color: red;}
+            30% {background-color: blue;}
+            60% {background-color: yellow;}
+            100% {background-color: green;}
+            /*动画变色规则  百分数是动画进行到什么时候*/
+        }
+        div{
+            width: 100px;
+            height: 75px;
+            background-color: #cccccc;
+            border:1px solid black;
+            color: #000;/*变色后，字的颜色*/
+            /*transition: all 1s linear; !*变色*!*/
+        }
+        #rotateDiv{
+            transform: rotate(30deg);
+
+        }
+        div:hover{
+            /*color: white;*/
+            /*background-color: #45B823;*/
+            animation: mycolor 5s linear; /*动画*/
+        }
+    </style>
+</head>
+<body>
+    <div>前端开发</div>
+    <div id="rotateDiv">web前端开发</div>
+</body>
+</html>
