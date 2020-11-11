@@ -214,3 +214,24 @@ Javascript 从交互角度，提升用户体验
         *   内容、父容器、舞台
             *   父容器 --内容旋转`transform-style:preserve-3d and transform:rotateY(60deg)`
             *   舞台 --内容透视`perspective:100px`
+#JavaScript
+    *   JavaScript概述
+        *   一中运行与JS解释器/引擎中的解释型脚本语言
+        *   解释型指运行前是不需要编译的，运行不会检查错误，直到遇错停止
+        *   使用场合 --PC、手机、平板、机顶盒
+        *   运行环境 --NodeJS以及嵌入内核中的JS解释器
+        *   JS组成 --核心`ECAMScript` 文档对象模型`DOM 让JS有能力与网页进行对话` 浏览器对象模型`BOM有能力让JS与浏览器对话`
+        *   弱类型语言 --由数据来决定数据的类型
+        *   面向对象
+    *   基础语法
+        *   浏览器内核 --负责页面内容的渲染 `两部分:1内容排版引擎解析`HTML和CSS`2脚本解释引擎解析`JS``
+        *   网页嵌入网页方式 --1将JS嵌入在元素的`事件`中 2将JS嵌入在`<script>`标记中 3将JS代码写在外部脚本文件中并引入
+        *   语句 --分号表示结束 大小写敏感 英文标点符号 由表达式、关键字、运算符组成
+        *   注释 --单行注释// 多行注释/**/ 
+    *   变量
+        *   内存 --保存程序在运行过程中，所需要用到的数据
+        *   变量 --内存中的一段存储空间 变量名是内存空间的别名 变量值是保存在内存空间的数据
+        *   变量声明 --`var username; var bookprice=2;`声明过程中，尽量不要省略var，否则声明的是全局变量
+        *   变量命名规范 --不允许使用JS的关键字和保留关键字 由字母、数字、下划线以及$组成 不能以数字开头 尽量见名知意 可以采用驼峰命名法`合成词组成时，第一个词小写，第二个词之后每个首字母大写`
+        *   变量使用 --`var stuName="小猪佩奇";console.log(stuName);` or `var stuName;console.log(stuName);`变量声明后，未赋值，称之为未经初始化变量，输出undefined or 使用为声明变量`console.log(stuHeight);`结果为错误
+        *   变量存取操作 --获取变量的值`var stuName="小猪佩奇";console.log(stuName);document.write(stuName);var newName=stuName;` 保存变量的值`var stuName="小猪佩奇";stuName="yes";stuName=newName;`重新赋值
