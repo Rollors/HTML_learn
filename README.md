@@ -235,3 +235,19 @@ Javascript 从交互角度，提升用户体验
         *   变量命名规范 --不允许使用JS的关键字和保留关键字 由字母、数字、下划线以及$组成 不能以数字开头 尽量见名知意 可以采用驼峰命名法`合成词组成时，第一个词小写，第二个词之后每个首字母大写` 
         *   变量使用 --`var stuName="小猪佩奇";console.log(stuName);` or `var stuName;console.log(stuName);`变量声明后，未赋值，称之为未经初始化变量，输出undefined or 使用为声明变量`console.log(stuHeight);`结果为错误
         *   变量存取操作 --获取变量的值`var stuName="小猪佩奇";console.log(stuName);document.write(stuName);var newName=stuName;` 保存变量的值`var stuName="小猪佩奇";stuName="yes";stuName=newName;`重新赋值
+    *   变量类型
+        *   数字类型 --可以表示32位的整数以及64位的浮点数 整数32位即4字节 浮点数64位即8字节
+        *   字符串类型 --表示一系列的文本字符数据;由unicode字符、数字以及标点组成;在内存中每个字符、数字以及标点占2字节;汉字16进制开始位置`\u4e00`结束位置`\u9fa5`;转义字符如`\t`
+        *   布尔类型 --用于表示条件的结果;除条件判断外，做运算时，true也可以作为1，false作为0
+        *   空 --null 
+        *   未定义 --声明变量未赋值 访问对象不存在属性 输出undefined
+    *   数据类型转换
+        *   隐式转换 --自动转换，不需要人为参与
+            *   函数 --typeof()判断值得 数据类型
+            *   NAN --代表不是一个数值 ISNAN()判断是不是数字true代表不是一个数字，false代表是一个数字
+            *   所有数据类型在与string类型相加时，结果都为string类型
+        *   强制转换
+            *   toString() --将数据转换为string
+            *   parseInt() --获取指定数据的整数部分;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
+            *   parseFloat() --将指定数据转换为小数;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
+            *   Number() --将一个字符串解析为number;如果包含非法字符，则返回NAN;
