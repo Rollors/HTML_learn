@@ -251,3 +251,33 @@ Javascript 从交互角度，提升用户体验
             *   parseInt() --获取指定数据的整数部分;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
             *   parseFloat() --将指定数据转换为小数;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
             *   Number() --将一个字符串解析为number;如果包含非法字符，则返回NAN;
+    *   运算符 --能够完成数据计算的一组符号
+    *   表达式 --由运算符和操作数组成的式子叫做表达式
+    *   函数 --一段预定义好、并可以被反复使用的代码块
+        *   预定义好 --事先声明好，但不被执行
+        *   反复使用 --允许被多个地方引用
+        *   代码块 --允许包含多条可执行的代码
+        *   函数声明 --function 函数名(参数){可执行语句;}
+        *   函数的调用 --直接使用函数名
+        *   定义函数的返回值 --return
+    *   DOM --万维网联盟的标准，允许程序和脚本动态访问和更新文档的内容、结构和样式
+        *   DOM操作 --查找节点信息 修改节点信息 删除节点信息 读取节点信息 创建新节点
+        *   按id属性，精确查找一个元素对象 --var elem=document.getElementById("id") getElementById只能用于document上 只能用于精确查找一个元素 不是所有元素都有id
+        *   按标签名称找 --var elem=parent.getElementsByTagName("tag") 查找指定parent节点下的所有标签为tag的子代节点;返回一个动态集合，即使只有一个元素，也是数组形式;
+        *   name属性查找 --var elem=document.getElementByName("name的属性值") 可以返回DOM树中具有指定name属性值得所有子元素集合;
+        *   class查找 --var elem=parent.getElementsByClassName("class") 有兼容性问题;
+        *   CSS选择器查找 --元组选择器、类选择器、Id选择器、后代选择器、子代选择器、群组选择器
+            *   只找一个元素 --var elem=parent.querySelector("selector") selector支持css中所有选择器 如果选择器匹配的有多个，只返回第一个
+            *   找多个 --var elems=parent.querySelectorAll("selector") 返回的是非动态集合
+        *   DOM核心操作
+            *   读取属性值 
+                *   先获得属性节点对象，再获取节点对象的值 --var attrNode=elem.attributes[下标/属性名] or var attrNode=elem.getAttributeNode(属性名);attrNode.value;得到属性值
+                *   直接获取属性值 --var value=elem.getAttribute("属性名")
+            *   修改属性值
+                *   elem.setAttribute("属性名",value);将属性名改为value
+            *   判断是否包含指定属性
+                *   var bool=elem.hasAttribute("属性名")
+            *   移除属性
+                *   elem.removeAttribute("属性名")
+            *   修改样式 --elem.style.属性名;属性名应去横线、变驼峰;如`background-color`需要写为backgroundColor
+        
