@@ -266,7 +266,7 @@ Javascript 从交互角度，提升用户体验
         *   按标签名称找 --var elem=parent.getElementsByTagName("tag") 查找指定parent节点下的所有标签为tag的子代节点;返回一个动态集合，即使只有一个元素，也是数组形式;
         *   name属性查找 --var elem=document.getElementByName("name的属性值") 可以返回DOM树中具有指定name属性值得所有子元素集合;
         *   class查找 --var elem=parent.getElementsByClassName("class") 有兼容性问题;
-        *   CSS选择器查找 --元组选择器、类选择器、Id选择器、后代选择器、子代选择器、群组选择器
+        *   CSS选择器查找 --元组选择器、类选择器、Id选择器、后代选择器、子代选择器、群组选择器t
             *   只找一个元素 --var elem=parent.querySelector("selector") selector支持css中所有选择器 如果选择器匹配的有多个，只返回第一个
             *   找多个 --var elems=parent.querySelectorAll("selector") 返回的是非动态集合
         *   DOM核心操作
@@ -280,4 +280,27 @@ Javascript 从交互角度，提升用户体验
             *   移除属性
                 *   elem.removeAttribute("属性名")
             *   修改样式 --elem.style.属性名;属性名应去横线、变驼峰;如`background-color`需要写为backgroundColor
+        *   DOM添加 --1.创建空元素 2.设置关键属性 3.将元素添加到DOM树
+            *   创建空元素 --var elem=document.createElement("元素名")如table标签
+            *   设置关键属性 --如a标签:属性a.innerHTML="go to tmooc";a.herf="http://tmooc.cn";可以得到<a href="http://tmooc.cn">go to tmooc</a>;样式:a.style.opacity="1";a.style.cssText="width:100px;height:100px;"
+            *   添加到DOM树 --1.parentNode.appendChild(childNode) 如:var div=document.createElement("div");var txt=document.createTextNode("版权声明");div.appendChild(txt);documentbody.appendChild(div);
+                            2.parentNode.insertBefore(newChild,existingChild)用于在父元素中指定子节点之前添加一个新的子节点，如:` <ul id="menu"><li>首页</li><li>联系我们</li></ul>`在这个标签之前添加一个元素,var ul=document.getElementById('menu');var newli=document=createElement("li");ul.insertBefor(newli,ul.lastChild);存在一定问题，需要少操作DOM树，每一次操作DOM树就需要重新layout;
+                            建议：1.如果同时创建父元素和子元素，建议在内存中先将子元素添加到父元素，再将父元素一次性挂到页面
+                                 2.如果只添加多个平级子元素，就要将所有子元素，临时添加到文档片段，再将文档片段整体添加到页面，如:1.创建片段 var flag=document.createDocumentFragment();2.将子元素临时追加到frag中 frag.appendChild(child);3.将frag追加到页面 parent.appendChild(frag)随后frag自动释放，不占用元素；
+   
+    *   BOM 
+        *   概述 --Browser Object Model 专用操作浏览器窗口的API:没有标准、有兼容性问题
+        *   浏览器对象模型
+            *   windos --代表整个窗口 如获取窗口大小`windos.outerWidth/outerHeight` or 文档显示区大小`windos.innerWidth/innerHeight`
+            *   history --封装当前窗口打开后，成功访问过的历史url记录
+            *   navigator --封装浏览器配置信息
+            *   document --封装当前正在加载的网页内容
+            *   location --封装了当前窗口正在打开的url地址
+            *   screen --封装屏幕信息
+            *   event --定义了网页中的事件机制
+        *   定时器 --让程序按指定时间间隔自动执行任务 网页动态效果、计时功能等
+            *   周期性定时器 --让程序按指定时间间隔自定执行任务
+                *   setInterval(exp,time):周期性触发代码exp;exp:执行语句;time:执行时间,单位是毫秒;如`var timer=setInterval(function(){consol.log("hello world")},1000);clearInterval(timer)停止定时器`
+            *   一次性定时器
+                *   setTimeout(exp,time)同上;如`setTimeout(function(){alert("恭喜恭喜")},3000);`
         
