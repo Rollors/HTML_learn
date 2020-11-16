@@ -4,7 +4,6 @@ CSS 美化页面
 Javascript 从交互角度，提升用户体验  
 搜索引擎对网页的抓取通过关键字
 *** 
-
 **_HTML(超文本标记语言)_**：超文本是用过超链接的形式将文本组合在一起，标记是对网页中每部分的功能进行标记  
 *   标签：元素  
     *   由尖括号包围、成对出现   --`<title>百度一下</title>`成为元素  
@@ -216,145 +215,145 @@ Javascript 从交互角度，提升用户体验
             *   舞台 --内容透视`perspective:100px`
 ***
 **_JavaScript_**
-    *   JavaScript概述
-        *   一中运行与JS解释器/引擎中的解释型脚本语言
-        *   解释型指运行前是不需要编译的，运行不会检查错误，直到遇错停止
-        *   使用场合 --PC、手机、平板、机顶盒
-        *   运行环境 --NodeJS以及嵌入内核中的JS解释器
-        *   JS组成 --核心`ECAMScript` 文档对象模型`DOM 让JS有能力与网页进行对话` 浏览器对象模型`BOM有能力让JS与浏览器对话`的
-        *   弱类型语言 --由数据来决定数据的类型
-        *   面向对象
-    *   基础语法
-        *   浏览器内核 --负责页面内容的渲染 `两部分:1内容排版引擎解析`HTML和CSS`2脚本解释引擎解析`JS``
-        *   网页嵌入网页方式 --1将JS嵌入在元素的`事件`中 2将JS嵌入在`<script>`标记中 3将JS代码写在外部脚本文件中并引入
-        *   语句 --分号表示结束 大小写敏感 英文标点符号 由表达式、关键字、运算符组成
-        *   注释 --单行注释// 多行注释/**/ 
-    *   变量
-        *   内存 --保存程序在运行过程中，所需要用到的数据
-        *   变量 --内存中的一段存储空间 变量名是内存空间的别名 变量值是保存在内存空间的数据
-        *   变量声明 --`var username; var bookprice=2;`声明过程中，尽量不要省略var，否则声明的是全局变量
-        *   变量命名规范 --不允许使用JS的关键字和保留关键字 由字母、数字、下划线以及$组成 不能以数字开头 尽量见名知意 可以采用驼峰命名法`合成词组成时，第一个词小写，第二个词之后每个首字母大写` 
-        *   变量使用 --`var stuName="小猪佩奇";console.log(stuName);` or `var stuName;console.log(stuName);`变量声明后，未赋值，称之为未经初始化变量，输出undefined or 使用为声明变量`console.log(stuHeight);`结果为错误
-        *   变量存取操作 --获取变量的值`var stuName="小猪佩奇";console.log(stuName);document.write(stuName);var newName=stuName;` 保存变量的值`var stuName="小猪佩奇";stuName="yes";stuName=newName;`重新赋值
-    *   变量类型
-        *   数字类型 --可以表示32位的整数以及64位的浮点数 整数32位即4字节 浮点数64位即8字节
-        *   字符串类型 --表示一系列的文本字符数据;由unicode字符、数字以及标点组成;在内存中每个字符、数字以及标点占2字节;汉字16进制开始位置`\u4e00`结束位置`\u9fa5`;转义字符如`\t`
-        *   布尔类型 --用于表示条件的结果;除条件判断外，做运算时，true也可以作为1，false作为0
-        *   空 --null 
-        *   未定义 --声明变量未赋值 访问对象不存在属性 输出undefined
-    *   数据类型转换
-        *   隐式转换 --自动转换，不需要人为参与
-            *   函数 --typeof()判断值得 数据类型
-            *   NAN --代表不是一个数值 ISNAN()判断是不是数字true代表不是一个数字，false代表是一个数字
-            *   所有数据类型在与string类型相加时，结果都为string类型
-        *   强制转换
-            *   toString() --将数据转换为string
-            *   parseInt() --获取指定数据的整数部分;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
-            *   parseFloat() --将指定数据转换为小数;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
-            *   Number() --将一个字符串解析为number;如果包含非法字符，则返回NAN;
-    *   运算符 --能够完成数据计算的一组符号
-    *   表达式 --由运算符和操作数组成的式子叫做表达式
-    *   函数 --一段预定义好、并可以被反复使用的代码块
-        *   预定义好 --事先声明好，但不被执行
-        *   反复使用 --允许被多个地方引用
-        *   代码块 --允许包含多条可执行的代码
-        *   函数声明 --function 函数名(参数){可执行语句;}
-        *   函数的调用 --直接使用函数名
-        *   定义函数的返回值 --return
-    *   DOM --万维网联盟的标准，允许程序和脚本动态访问和更新文档的内容、结构和样式 专用于操作文档
-        *   DOM操作 --查找节点信息 修改节点信息 删除节点信息 读取节点信息 创建新节点
-        *   按id属性，精确查找一个元素对象 --var elem=document.getElementById("id") getElementById只能用于document上 只能用于精确查找一个元素 不是所有元素都有id
-        *   按标签名称找 --var elem=parent.getElementsByTagName("tag") 查找指定parent节点下的所有标签为tag的子代节点;返回一个动态集合，即使只有一个元素，也是数组形式;
-        *   name属性查找 --var elem=document.getElementByName("name的属性值") 可以返回DOM树中具有指定name属性值得所有子元素集合;
-        *   class查找 --var elem=parent.getElementsByClassName("class") 有兼容性问题;
-        *   CSS选择器查找 --元组选择器、类选择器、Id选择器、后代选择器、子代选择器、群组选择器t
-            *   只找一个元素 --var elem=parent.querySelector("selector") selector支持css中所有选择器 如果选择器匹配的有多个，只返回第一个
-            *   找多个 --var elems=parent.querySelectorAll("selector") 返回的是非动态集合
-        *   DOM核心操作
-            *   读取属性值 
-                *   先获得属性节点对象，再获取节点对象的值 --var attrNode=elem.attributes[下标/属性名] or var attrNode=elem.getAttributeNode(属性名);attrNode.value;得到属性值
-                *   直接获取属性值 --var value=elem.getAttribute("属性名")
-            *   修改属性值
-                *   elem.setAttribute("属性名",value);将属性名改为value
-            *   判断是否包含指定属性
-                *   var bool=elem.hasAttribute("属性名")
-            *   移除属性
-                *   elem.removeAttribute("属性名")
-            *   修改样式 --elem.style.属性名;属性名应去横线、变驼峰;如`background-color`需要写为backgroundColor
-        *   DOM添加 --1.创建空元素 2.设置关键属性 3.将元素添加到DOM树
-            *   创建空元素 --var elem=document.createElement("元素名")如table标签
-            *   设置关键属性 --如a标签:属性a.innerHTML="go to tmooc";a.herf="http://tmooc.cn";可以得到<a href="http://tmooc.cn">go to tmooc</a>;样式:a.style.opacity="1";a.style.cssText="width:100px;height:100px;"
-            *   添加到DOM树 --1.parentNode.appendChild(childNode) 如:var div=document.createElement("div");var txt=document.createTextNode("版权声明");div.appendChild(txt);documentbody.appendChild(div);
+*   JavaScript概述
+    *   一中运行与JS解释器/引擎中的解释型脚本语言
+    *   解释型指运行前是不需要编译的，运行不会检查错误，直到遇错停止
+    *   使用场合 --PC、手机、平板、机顶盒
+    *   运行环境 --NodeJS以及嵌入内核中的JS解释器
+    *   JS组成 --核心`ECAMScript` 文档对象模型`DOM 让JS有能力与网页进行对话` 浏览器对象模型`BOM有能力让JS与浏览器对话`的
+    *   弱类型语言 --由数据来决定数据的类型
+    *   面向对象
+*   基础语法
+    *   浏览器内核 --负责页面内容的渲染 `两部分:1内容排版引擎解析`HTML和CSS`2脚本解释引擎解析`JS``
+    *   网页嵌入网页方式 --1将JS嵌入在元素的`事件`中 2将JS嵌入在`<script>`标记中 3将JS代码写在外部脚本文件中并引入
+    *   语句 --分号表示结束 大小写敏感 英文标点符号 由表达式、关键字、运算符组成
+    *   注释 --`单行注释// 多行注释/**/ `
+*   变量
+    *   内存 --保存程序在运行过程中，所需要用到的数据
+    *   变量 --内存中的一段存储空间 变量名是内存空间的别名 变量值是保存在内存空间的数据
+    *   变量声明 --`var username; var bookprice=2;`声明过程中，尽量不要省略var，否则声明的是全局变量
+    *   变量命名规范 --不允许使用JS的关键字和保留关键字 由字母、数字、下划线以及$组成 不能以数字开头 尽量见名知意 可以采用驼峰命名法`合成词组成时，第一个词小写，第二个词之后每个首字母大写` 
+    *   变量使用 --`var stuName="小猪佩奇";console.log(stuName);` or `var stuName;console.log(stuName);`变量声明后，未赋值，称之为未经初始化变量，输出undefined or 使用为声明变量`console.log(stuHeight);`结果为错误
+    *   变量存取操作 --获取变量的值`var stuName="小猪佩奇";console.log(stuName);document.write(stuName);var newName=stuName;` 保存变量的值`var stuName="小猪佩奇";stuName="yes";stuName=newName;`重新赋值
+*   变量类型
+    *   数字类型 --可以表示32位的整数以及64位的浮点数 整数32位即4字节 浮点数64位即8字节
+    *   字符串类型 --表示一系列的文本字符数据;由unicode字符、数字以及标点组成;在内存中每个字符、数字以及标点占2字节;汉字16进制开始位置`\u4e00`结束位置`\u9fa5`;转义字符如`\t`
+    *   布尔类型 --用于表示条件的结果;除条件判断外，做运算时，true也可以作为1，false作为0
+    *   空 --null 
+    *   未定义 --声明变量未赋值 访问对象不存在属性 输出undefined
+*   数据类型转换
+    *   隐式转换 --自动转换，不需要人为参与
+        *   函数 --typeof()判断值得 数据类型
+        *   NAN --代表不是一个数值 ISNAN()判断是不是数字true代表不是一个数字，false代表是一个数字
+        *   所有数据类型在与string类型相加时，结果都为string类型
+    *   强制转换
+        *   toString() --将数据转换为string
+        *   parseInt() --获取指定数据的整数部分;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
+        *   parseFloat() --将指定数据转换为小数;从左到右依次转换 碰到第一个非整数字符，则停止转换;如果第一个字符就是非整数字符，结果为NAN;
+        *   Number() --将一个字符串解析为number;如果包含非法字符，则返回NAN;
+*   运算符 --能够完成数据计算的一组符号
+*   表达式 --由运算符和操作数组成的式子叫做表达式
+*   函数 --一段预定义好、并可以被反复使用的代码块
+    *   预定义好 --事先声明好，但不被执行
+    *   反复使用 --允许被多个地方引用
+    *   代码块 --允许包含多条可执行的代码
+    *   函数声明 --function 函数名(参数){可执行语句;}
+    *   函数的调用 --直接使用函数名
+    *   定义函数的返回值 --return
+*   DOM --万维网联盟的标准，允许程序和脚本动态访问和更新文档的内容、结构和样式 专用于操作文档
+    *   DOM操作 --查找节点信息 修改节点信息 删除节点信息 读取节点信息 创建新节点
+    *   按id属性，精确查找一个元素对象 --var elem=document.getElementById("id") getElementById只能用于document上 只能用于精确查找一个元素 不是所有元素都有id
+    *   按标签名称找 --var elem=parent.getElementsByTagName("tag") 查找指定parent节点下的所有标签为tag的子代节点;返回一个动态集合，即使只有一个元素，也是数组形式;
+    *   name属性查找 --var elem=document.getElementByName("name的属性值") 可以返回DOM树中具有指定name属性值得所有子元素集合;
+    *   class查找 --var elem=parent.getElementsByClassName("class") 有兼容性问题;
+    *   CSS选择器查找 --元组选择器、类选择器、Id选择器、后代选择器、子代选择器、群组选择器t
+        *   只找一个元素 --var elem=parent.querySelector("selector") selector支持css中所有选择器 如果选择器匹配的有多个，只返回第一个
+        *   找多个 --var elems=parent.querySelectorAll("selector") 返回的是非动态集合
+    *   DOM核心操作
+        *   读取属性值 
+            *   先获得属性节点对象，再获取节点对象的值 --var attrNode=elem.attributes[下标/属性名] or var attrNode=elem.getAttributeNode(属性名);attrNode.value;得到属性值
+            *   直接获取属性值 --var value=elem.getAttribute("属性名")
+        *   修改属性值
+            *   elem.setAttribute("属性名",value);将属性名改为value
+        *   判断是否包含指定属性
+            *   var bool=elem.hasAttribute("属性名")
+        *   移除属性
+            *   elem.removeAttribute("属性名")
+        *   修改样式 --elem.style.属性名;属性名应去横线、变驼峰;如`background-color`需要写为backgroundColor
+    *   DOM添加 --1.创建空元素 2.设置关键属性 3.将元素添加到DOM树
+        *   创建空元素 --var elem=document.createElement("元素名")如table标签
+        *   设置关键属性 --如a标签:属性a.innerHTML="go to tmooc";a.herf="http://tmooc.cn";可以得到<a href="http://tmooc.cn">go to tmooc</a>;样式:a.style.opacity="1";a.style.cssText="width:100px;height:100px;"
+        *   添加到DOM树 --1.parentNode.appendChild(childNode) 如:var div=document.createElement("div");var txt=document.createTextNode("版权声明");div.appendChild(txt);documentbody.appendChild(div);
                             2.parentNode.insertBefore(newChild,existingChild)用于在父元素中指定子节点之前添加一个新的子节点，如:` <ul id="menu"><li>首页</li><li>联系我们</li></ul>`在这个标签之前添加一个元素,var ul=document.getElementById('menu');var newli=document=createElement("li");ul.insertBefor(newli,ul.lastChild);存在一定问题，需要少操作DOM树，每一次操作DOM树就需要重新layout;
                             建议：1.如果同时创建父元素和子元素，建议在内存中先将子元素添加到父元素，再将父元素一次性挂到页面
                                  2.如果只添加多个平级子元素，就要将所有子元素，临时添加到文档片段，再将文档片段整体添加到页面，如:1.创建片段 var flag=document.createDocumentFragment();2.将子元素临时追加到frag中 frag.appendChild(child);3.将frag追加到页面 parent.appendChild(frag)随后frag自动释放，不占用元素；
-    *   BOM 
-        *   概述 --Browser Object Model 专用操作*浏览器*窗口的API:没有标准、有兼容性问题
-        *   浏览器对象模型
-            *   windos --代表整个窗口 如获取窗口大小`windos.outerWidth/outerHeight` or 文档显示区大小`windos.innerWidth/innerHeight`
-            *   history --封装当前窗口打开后，成功访问过的历史url记录
-            *   navigator --封装浏览器配置信息
-            *   document --封装当前正在加载的网页内容
-            *   location --封装了当前窗口正在打开的url地址
-            *   screen --封装屏幕信息
-            *   event --定义了网页中的事件机制
-        *   定时器 --让程序按指定时间间隔自动执行任务 网页动态效果、计时功能等
-            *   周期性定时器 --让程序按指定时间间隔自定执行任务
-                *   setInterval(exp,time):周期性触发代码exp;exp:执行语句;time:执行时间,单位是毫秒;如`var timer=setInterval(function(){consol.log("hello world")},1000);clearInterval(timer)停止定时器`
-            *   一次性定时器
-                *   setTimeout(exp,time)同上;如`setTimeout(function(){alert("恭喜恭喜")},3000);`
-    *   JS事件 --JS是一种事件驱动语言，事件是脚本处理响应用户动作的方法，利用浏览器对用户输入的判断能力，通过建立事件与脚本的对应关系，把用户输入状态的改变传递给脚本，并予以处理
-        *   onabort --图像加载被中断
-        *   onblur --元素失去焦点
-        *   onchange --用户改变域的内容
-        *   onclick --鼠标单击某个对象
-        *   ondblclick --鼠标双击某个对象
-        *   onerror --当加载文档或图像时发生某个错误
-        *   onfocus --元素获得焦点
-        *   onkeydown --某个键盘的键被按下
-        *   onkeypress --某个键盘的键被按下或按住
-        *   onkeyup --松开
-        *   onload --某个页面或图像完成加载
-        *   onmouse --`down move out over up`按下 移动 从某元素移开 移动到某元素 松开
-        *   onreset --重置按钮被单击
-        *   onresize --窗口或框架被调整尺寸
-        *   onselect --文本被选定
-        *   onsubmit --提交按钮被单击
-        *   onunload --用户退出页面
-    *   JS对象
-        *   String对象
-            *   charAt(n) --返回字符串的第N个字符
-            *   indexOf(srcgStr[,index]) --返回第一次出现子字符串srchStr的位置，index从某一指定处开始，而不是从头开始，若没有子串，返回-1
-            *   lastindexOf(srcgStr[,index]) --返回最后一次出现子字符串srchStr的位置，index从某一指定处开始，而不是从头开始
-            *   link(href) --显示href参数指定的URL的超链接
-            *   match() --找到一个或多个正则表达式的匹配
-            *   replace() --检索与正则表达式相匹配的值
-            *   slice() --提取字符串的片段，并在新的字符串中返回被提取的部分
-            *   split(分隔符) --把字符串分割为字符串数组
-            *   subString(n1,n2) --返回n1和n2之间的子字符串
-            *   toLowerCase() --将字符转换成小写格式显示
-            *   toUpperCase() --将字符转换成大写格式
-        *   Array对象
-            *   concat(array2) --返回包含当前引用数组和array2数组级联的Array对象
-            *   reverse() --把一个Array对象中的元素在适当的位置进行倒序
-            *   pop() --从一个数组中删除最后一个元素并返回它
-            *   push() --添加一个或多个元素到某个数组的后面并返回添加的最后一个元素
-            *   shift() --从一个数组中删除第一个元素并返回这个元素
-            *   slice(start,end) --返回数组的一部分
-            *   sort() --排序数组元素，将没有定义的元素排在后面
-            *   unshift() --添加一个或多个元素到某个数组前面，并返回数组新长度
-        *   Date对象
-            *   getDate() --返回在一个月中的那一天
-            *   getDay() --返回一个星期中的哪一天(0-6),星期天为0
-            *   getHours() --返回一天中的哪一个小时
-            *   getMinutes() --返回一个小时的某一分钟
-            *   getSeconds() --同上
-            *   getYear() --返回年号
-            *   setDate(day) --设置日期
-            *   setHours(hours) --
-            *   setSeconds(seconds) --
-            *   setMinutes(mins) --
-            *   setYear(year) --同上
-        *   自定义对象
-            *   JSON方法 --`var json={propertyName:value;functionName:function(){statements;}}`
-            *   构造函数方法 --`function funname([param1,...]){this.param1=param1;this.param2=param2;}`    
+*   BOM 
+    *   概述 --Browser Object Model 专用操作*浏览器*窗口的API:没有标准、有兼容性问题
+    *   浏览器对象模型
+        *   windos --代表整个窗口 如获取窗口大小`windos.outerWidth/outerHeight` or 文档显示区大小`windos.innerWidth/innerHeight`
+        *   history --封装当前窗口打开后，成功访问过的历史url记录
+        *   navigator --封装浏览器配置信息
+        *   document --封装当前正在加载的网页内容
+        *   location --封装了当前窗口正在打开的url地址
+        *   screen --封装屏幕信息
+        *   event --定义了网页中的事件机制
+    *   定时器 --让程序按指定时间间隔自动执行任务 网页动态效果、计时功能等
+        *   周期性定时器 --让程序按指定时间间隔自定执行任务
+            *   setInterval(exp,time):周期性触发代码exp;exp:执行语句;time:执行时间,单位是毫秒;如`var timer=setInterval(function(){consol.log("hello world")},1000);clearInterval(timer)停止定时器`
+        *   一次性定时器
+            *   setTimeout(exp,time)同上;如`setTimeout(function(){alert("恭喜恭喜")},3000);`
+*   JS事件 --JS是一种事件驱动语言，事件是脚本处理响应用户动作的方法，利用浏览器对用户输入的判断能力，通过建立事件与脚本的对应关系，把用户输入状态的改变传递给脚本，并予以处理
+    *   onabort --图像加载被中断
+    *   onblur --元素失去焦点
+    *   onchange --用户改变域的内容
+    *   onclick --鼠标单击某个对象
+    *   ondblclick --鼠标双击某个对象
+    *   onerror --当加载文档或图像时发生某个错误
+    *   onfocus --元素获得焦点
+    *   onkeydown --某个键盘的键被按下
+    *   onkeypress --某个键盘的键被按下或按住
+    *   onkeyup --松开
+    *   onload --某个页面或图像完成加载
+    *   onmouse --`down move out over up`按下 移动 从某元素移开 移动到某元素 松开
+    *   onreset --重置按钮被单击
+    *   onresize --窗口或框架被调整尺寸
+    *   onselect --文本被选定
+    *   onsubmit --提交按钮被单击
+    *   onunload --用户退出页面
+*   JS对象
+    *   String对象
+        *   charAt(n) --返回字符串的第N个字符
+        *   indexOf(srcgStr[,index]) --返回第一次出现子字符串srchStr的位置，index从某一指定处开始，而不是从头开始，若没有子串，返回-1
+        *   lastindexOf(srcgStr[,index]) --返回最后一次出现子字符串srchStr的位置，index从某一指定处开始，而不是从头开始
+        *   link(href) --显示href参数指定的URL的超链接
+        *   match() --找到一个或多个正则表达式的匹配
+        *   replace() --检索与正则表达式相匹配的值
+        *   slice() --提取字符串的片段，并在新的字符串中返回被提取的部分
+        *   split(分隔符) --把字符串分割为字符串数组
+        *   subString(n1,n2) --返回n1和n2之间的子字符串
+        *   toLowerCase() --将字符转换成小写格式显示
+        *   toUpperCase() --将字符转换成大写格式
+    *   Array对象
+        *   concat(array2) --返回包含当前引用数组和array2数组级联的Array对象
+        *   reverse() --把一个Array对象中的元素在适当的位置进行倒序
+        *   pop() --从一个数组中删除最后一个元素并返回它
+        *   push() --添加一个或多个元素到某个数组的后面并返回添加的最后一个元素
+        *   shift() --从一个数组中删除第一个元素并返回这个元素
+        *   slice(start,end) --返回数组的一部分
+        *   sort() --排序数组元素，将没有定义的元素排在后面
+        *   unshift() --添加一个或多个元素到某个数组前面，并返回数组新长度
+    *   Date对象
+        *   getDate() --返回在一个月中的那一天
+        *   getDay() --返回一个星期中的哪一天(0-6),星期天为0
+        *   getHours() --返回一天中的哪一个小时
+        *   getMinutes() --返回一个小时的某一分钟
+        *   getSeconds() --同上
+        *   getYear() --返回年号
+        *   setDate(day) --设置日期
+        *   setHours(hours) --
+        *   setSeconds(seconds) --
+        *   setMinutes(mins) --
+        *   setYear(year) --同上
+    *   自定义对象
+        *   JSON方法 --`var json={propertyName:value;functionName:function(){statements;}}`
+        *   构造函数方法 --`function funname([param1,...]){this.param1=param1;this.param2=param2;}`    
