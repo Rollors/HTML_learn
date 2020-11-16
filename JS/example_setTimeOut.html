@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>settimeout</title>
+<!--    setTimeout只执行一次，参数有两个：一个是执行的代码，一个是等待的毫秒数-->
+    <script type="text/javascript">
+        window.onload=function (){
+            dispTime=document.getElementById("dispTime");
+            dispTime.value="hello";
+            interval=1000;
+            function change(){
+                var today=new Date();
+                dispTime.innerHTML=two(today.getHours())+":";
+                dispTime.innerHTML+=two(today.getMinutes())+":";
+                dispTime.innerHTML+=two(today.getSeconds());
+                timerID=window.setTimeout(change,interval); //创建一个计时器，每interval毫秒调用一次
+            }
+            function two(x){
+                return (x>=10?x:"0"+x);
+            }
+            change();
+            // window.clearTimeout(timerID); 清除计时器
+        }
+    </script>
+</head>
+<body>
+    <label id="dispTime"></label>
+</body>
+</html>

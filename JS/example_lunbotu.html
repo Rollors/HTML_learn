@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <script type="text/javascript">
+        window.onload=function (){
+            imgCount=0;
+            myImg=document.getElementById("myImg");
+            myBox=document.getElementById("box");
+            myNumberBox=document.getElementById("number");
+            myNumberLi=myNumberBox.getElementsByTagName("li")
+            for(i=0;i<myNumberLi.length;i++) {
+                myNumberLi[i].index = i;
+                myNumberLi[i].onclick = function () {
+                    for (i = 0; i < myNumberLi.length; i++) {
+                        myNumberLi[i].classList.remove("active");
+                    }
+                    this.classList.add("active");
+                    imgCount = this.innerHTML - 1;
+                    myImg.src = "image/" + imgCount + ".jpg";
+                }
+
+                myBox.onmouseout = function () {
+                    timeOut = setInterval(changeImg, 1000);
+                }
+                myBox.onmouseover = function () {
+                    clearInterval(timeOut)
+                }
+
+                function changeImg() {
+                    imgCount++;
+                    imgCount = imgCount % 5;
+                    myImg.src = "image/" + imgCount + ".jpg";
+                    for (i = 0; i < myNumberLi.length; i++) {
+                        myNumberLi.classList.remove("active");
+                    }
+                    this.classList.add("active");
+                }
+            }
+            timeOut=setInterval(changeImg,1000);
+        }
+    </script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            border: 1px solid red;
+            position: relative;
+        }
+        #box ul{
+
+            list-style: none;
+        }
+        #number{
+            position: absolute;
+            right: 10px;/*距离右侧10px*/
+            bottom: 10px;/*距离底部10px*/
+        }
+        #number li{
+            float: left;
+            margin: 5px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 50%;
+            background: white;
+            text-align: center;
+        }
+
+        #number li:hover{
+            color: white;/*字体颜色*/
+            background: red;/*背景颜色*/
+        }
+
+        #box ul li.active{
+            background: #f30;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li>
+                <img src="./image/0.jpg" alt="" id="myImg">
+            </li>
+        </ul>
+        <ul id="number">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+</html>
