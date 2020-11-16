@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件函数</title>
+    <script type="text/javascript">
+        window.onload=function (){//网页加载完毕，执行该匿名函数
+            var bt=document.getElementById('bt');
+            bt.onclick=function (){
+                do{
+                    username=prompt("请问你是哪只，速速滚出来!","");
+
+                }while (username=="")
+                alert(username+",走开走开")
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" id="bt" value="点我点我">
+</body>
+</html>

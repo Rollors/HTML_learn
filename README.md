@@ -68,7 +68,7 @@ Javascript 从交互角度，提升用户体验
             *   下拉 `    <select><option selected="selected"></option></select>` --为节省页面空间;selected="selected"表示被选中的；
             *   文本域 `<textarea name="" id="" cols="30" rows="10"></textarea>` --rows表示行；cols表示列数；
 ***
-#CSS样式 --父层的样式被子层继承
+**_CSS样式 --父层的样式被子层继承_**
 *   CSS概述
     *   层叠样式表(CSS):随着技术的发展，将网页的内容与样式相分离，便于修改，相同的内容可以给予不同的样式；
 *   CSS语法
@@ -214,7 +214,8 @@ Javascript 从交互角度，提升用户体验
         *   内容、父容器、舞台
             *   父容器 --内容旋转`transform-style:preserve-3d and transform:rotateY(60deg)`
             *   舞台 --内容透视`perspective:100px`
-#JavaScript
+***
+**_JavaScript_**
     *   JavaScript概述
         *   一中运行与JS解释器/引擎中的解释型脚本语言
         *   解释型指运行前是不需要编译的，运行不会检查错误，直到遇错停止
@@ -287,7 +288,6 @@ Javascript 从交互角度，提升用户体验
                             2.parentNode.insertBefore(newChild,existingChild)用于在父元素中指定子节点之前添加一个新的子节点，如:` <ul id="menu"><li>首页</li><li>联系我们</li></ul>`在这个标签之前添加一个元素,var ul=document.getElementById('menu');var newli=document=createElement("li");ul.insertBefor(newli,ul.lastChild);存在一定问题，需要少操作DOM树，每一次操作DOM树就需要重新layout;
                             建议：1.如果同时创建父元素和子元素，建议在内存中先将子元素添加到父元素，再将父元素一次性挂到页面
                                  2.如果只添加多个平级子元素，就要将所有子元素，临时添加到文档片段，再将文档片段整体添加到页面，如:1.创建片段 var flag=document.createDocumentFragment();2.将子元素临时追加到frag中 frag.appendChild(child);3.将frag追加到页面 parent.appendChild(frag)随后frag自动释放，不占用元素；
-   
     *   BOM 
         *   概述 --Browser Object Model 专用操作浏览器窗口的API:没有标准、有兼容性问题
         *   浏览器对象模型
@@ -303,4 +303,58 @@ Javascript 从交互角度，提升用户体验
                 *   setInterval(exp,time):周期性触发代码exp;exp:执行语句;time:执行时间,单位是毫秒;如`var timer=setInterval(function(){consol.log("hello world")},1000);clearInterval(timer)停止定时器`
             *   一次性定时器
                 *   setTimeout(exp,time)同上;如`setTimeout(function(){alert("恭喜恭喜")},3000);`
-        
+    *   JS事件 --JS是一种事件驱动语言，事件是脚本处理响应用户动作的方法，利用浏览器对用户输入的判断能力，通过建立事件与脚本的对应关系，把用户输入状态的改变传递给脚本，并予以处理
+        *   onabort --图像加载被中断
+        *   onblur --元素失去焦点
+        *   onchange --用户改变域的内容
+        *   onclick --鼠标单击某个对象
+        *   ondblclick --鼠标双击某个对象
+        *   onerror --当加载文档或图像时发生某个错误
+        *   onfocus --元素获得焦点
+        *   onkeydown --某个键盘的键被按下
+        *   onkeypress --某个键盘的键被按下或按住
+        *   onkeyup --松开
+        *   onload --某个页面或图像完成加载
+        *   onmouse --`down move out over up`按下 移动 从某元素移开 移动到某元素 松开
+        *   onreset --重置按钮被单击
+        *   onresize --窗口或框架被调整尺寸
+        *   onselect --文本被选定
+        *   onsubmit --提交按钮被单击
+        *   onunload --用户退出页面
+    *   JS对象
+        *   String对象
+            *   charAt(n) --返回字符串的第N个字符
+            *   indexOf(srcgStr[,index]) --返回第一次出现子字符串srchStr的位置，index从某一指定处开始，而不是从头开始，若没有子串，返回-1
+            *   lastindexOf(srcgStr[,index]) --返回最后一次出现子字符串srchStr的位置，index从某一指定处开始，而不是从头开始
+            *   link(href) --显示href参数指定的URL的超链接
+            *   match() --找到一个或多个正则表达式的匹配
+            *   replace() --检索与正则表达式相匹配的值
+            *   slice() --提取字符串的片段，并在新的字符串中返回被提取的部分
+            *   split(分隔符) --把字符串分割为字符串数组
+            *   subString(n1,n2) --返回n1和n2之间的子字符串
+            *   toLowerCase() --将字符转换成小写格式显示
+            *   toUpperCase() --将字符转换成大写格式
+        *   Array对象
+            *   concat(array2) --返回包含当前引用数组和array2数组级联的Array对象
+            *   reverse() --把一个Array对象中的元素在适当的位置进行倒序
+            *   pop() --从一个数组中删除最后一个元素并返回它
+            *   push() --添加一个或多个元素到某个数组的后面并返回添加的最后一个元素
+            *   shift() --从一个数组中删除第一个元素并返回这个元素
+            *   slice(start,end) --返回数组的一部分
+            *   sort() --排序数组元素，将没有定义的元素排在后面
+            *   unshift() --添加一个或多个元素到某个数组前面，并返回数组新长度
+        *   Date对象
+            *   getDate() --返回在一个月中的那一天
+            *   getDay() --返回一个星期中的哪一天(0-6),星期天为0
+            *   getHours() --返回一天中的哪一个小时
+            *   getMinutes() --返回一个小时的某一分钟
+            *   getSeconds() --同上
+            *   getYear() --返回年号
+            *   setDate(day) --设置日期
+            *   setHours(hours) --
+            *   setSeconds(seconds) --
+            *   setMinutes(mins) --
+            *   setYear(year) --同上
+        *   自定义对象
+            *   JSON方法 --`var json={propertyName:value;functionName:function(){statements;}}`
+            *   构造函数方法 --`function funname([param1,...]){this.param1=param1;this.param2=param2;}`    
