@@ -221,7 +221,7 @@ Javascript 从交互角度，提升用户体验
         *   解释型指运行前是不需要编译的，运行不会检查错误，直到遇错停止
         *   使用场合 --PC、手机、平板、机顶盒
         *   运行环境 --NodeJS以及嵌入内核中的JS解释器
-        *   JS组成 --核心`ECAMScript` 文档对象模型`DOM 让JS有能力与网页进行对话` 浏览器对象模型`BOM有能力让JS与浏览器对话`
+        *   JS组成 --核心`ECAMScript` 文档对象模型`DOM 让JS有能力与网页进行对话` 浏览器对象模型`BOM有能力让JS与浏览器对话`的
         *   弱类型语言 --由数据来决定数据的类型
         *   面向对象
     *   基础语法
@@ -261,7 +261,7 @@ Javascript 从交互角度，提升用户体验
         *   函数声明 --function 函数名(参数){可执行语句;}
         *   函数的调用 --直接使用函数名
         *   定义函数的返回值 --return
-    *   DOM --万维网联盟的标准，允许程序和脚本动态访问和更新文档的内容、结构和样式
+    *   DOM --万维网联盟的标准，允许程序和脚本动态访问和更新文档的内容、结构和样式 专用于操作文档
         *   DOM操作 --查找节点信息 修改节点信息 删除节点信息 读取节点信息 创建新节点
         *   按id属性，精确查找一个元素对象 --var elem=document.getElementById("id") getElementById只能用于document上 只能用于精确查找一个元素 不是所有元素都有id
         *   按标签名称找 --var elem=parent.getElementsByTagName("tag") 查找指定parent节点下的所有标签为tag的子代节点;返回一个动态集合，即使只有一个元素，也是数组形式;
@@ -289,7 +289,7 @@ Javascript 从交互角度，提升用户体验
                             建议：1.如果同时创建父元素和子元素，建议在内存中先将子元素添加到父元素，再将父元素一次性挂到页面
                                  2.如果只添加多个平级子元素，就要将所有子元素，临时添加到文档片段，再将文档片段整体添加到页面，如:1.创建片段 var flag=document.createDocumentFragment();2.将子元素临时追加到frag中 frag.appendChild(child);3.将frag追加到页面 parent.appendChild(frag)随后frag自动释放，不占用元素；
     *   BOM 
-        *   概述 --Browser Object Model 专用操作浏览器窗口的API:没有标准、有兼容性问题
+        *   概述 --Browser Object Model 专用操作*浏览器*窗口的API:没有标准、有兼容性问题
         *   浏览器对象模型
             *   windos --代表整个窗口 如获取窗口大小`windos.outerWidth/outerHeight` or 文档显示区大小`windos.innerWidth/innerHeight`
             *   history --封装当前窗口打开后，成功访问过的历史url记录
