@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>轮播图</title>
+    <script src="./jslib/jquery-3.5.1.min.js"></script>
     <script type="text/javascript">
         window.onload=function (){
             imgCount=0;
             myImg=document.getElementById("myImg");
             myBox=document.getElementById("box");
             myNumberBox=document.getElementById("number");
-            myNumberLi=myNumberBox.getElementsByTagName("li")
+            myNumberLi=myNumberBox.getElementsByTagName("li");
             for(i=0;i<myNumberLi.length;i++) {
                 myNumberLi[i].index = i;
                 myNumberLi[i].onclick = function () {
                     for (i = 0; i < myNumberLi.length; i++) {
                         myNumberLi[i].classList.remove("active");
                     }
-                    this.classList.add("active");
+                    myNumberLi[i].classList.add("active");
                     imgCount = this.innerHTML - 1;
                     myImg.src = "image/" + imgCount + ".jpg";
+                }
+
+                myBox.onmouseover = function () {
+                    clearInterval(timeOut)
                 }
 
                 myBox.onmouseout = function () {
                     timeOut = setInterval(changeImg, 1000);
                 }
-                myBox.onmouseover = function () {
-                    clearInterval(timeOut)
-                }
-
                 function changeImg() {
                     imgCount++;
                     imgCount = imgCount % 5;
                     myImg.src = "image/" + imgCount + ".jpg";
-                    for (i = 0; i < myNumberLi.length; i++) {
-                        myNumberLi.classList.remove("active");
+                    for (i = 0; i < myNumberLi.length; i++) { //清除所有li的active
+                        myNumberLi[i].classList.remove("active");
                     }
-                    this.classList.add("active");
+                    myNumberLi[imgCount].classList.add("active");//给当前的li添加active
                 }
             }
             timeOut=setInterval(changeImg,1000);

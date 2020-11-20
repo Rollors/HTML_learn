@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM对象的常用方法</title>
+    <script type="text/javascript">
+        window.onload=function (){
+            var myName=document.getElementsByName("abc");
+            var myDisp=document.getElementById("disp");
+            myDisp.innerHTML="选中的复选框个数："+myName.length+"</br>";
+            myDisp.innerHTML+="第2个复选框提交的值："+myName[1].value+"</br>";
+            myDisp.innerHTML+="第3个复选框的状态："+myName[2].checked+"</br>";
+
+            var newNode=document.createElement("li");
+            var newText=document.createTextNode("羽毛球");
+            // newNode.innerText="羽毛球"
+            newNode.appendChild(newText);
+            document.getElementById("myNode").appendChild(newNode);
+            myNode=document.getElementById("myNode");
+            myLi=myNode.getElementsByTagName("li");
+            var childNode=myLi[1];
+            var  removeNode=myNode.removeChild(childNode)
+        }
+    </script>
+</head>
+<body>
+    <form action="reg.php" method="post">
+        用户名：<input type="text" name="username"><br>
+        爱好：
+        <input type="checkbox" name="abc" value="music">音乐
+        <input type="checkbox" name="abc" value="football">足球
+        <input type="checkbox" name="abc" value="badminton" checked>羽毛球
+        <input type="checkbox" name="abc" value="basketball">篮球
+    </form>
+    <div id="disp">
+
+    </div>
+    <ul id="myNode">
+        <li>音乐</li>
+        <li>足球</li>
+        <li>篮球</li>
+    </ul>
+</body>
+</html>
