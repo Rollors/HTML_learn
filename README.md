@@ -392,4 +392,10 @@ Javascript 从交互角度，提升用户体验
         *   \XXX --由十进制数XXX指定的ACSII码
         *   \Xnn --由十六进制数nn指定的ACSII码
         *   \cX --控制字符^X
+    *   常用方法
+        *   test --通过该方法测试字符串中是否有符合正则式的子串存在，返回值是布尔值
+        *   match --用于检索字符串，找到一个或多个符合正则式的字符串
+        *   replace --执行替换操作 str.replace(reg,replacestr)
+        *   search --指明是否存在相应的匹配 str.search(reg)
+        
     

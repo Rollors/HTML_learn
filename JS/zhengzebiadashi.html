@@ -39,6 +39,35 @@
                 if(patten3.test(ipArr[i]))
                     document.write(ipArr[i]+"<br>")
             }
+
+            //向后引用 小括号代表分组，第一个小括号的组号是1，如要再次使用则\1，如下
+            //除了以上默认分组名，还可以指定分组名，(?<name>\w+) 或者(?'name'\w+) 若是要引用则用\k<name>
+            var numberArr=new Array("1212","1234","1221","1231");
+            var pattern4=/(\d)(\d)\2\1|(\d)(\d)\3\4/;
+            document.write("符合abba或者abab规则的数字列表如下：<br>");
+            for(i=0;i<numberArr.length;i++){
+                if(pattern4.test(numberArr[i]))
+                    document.write(numberArr[i]+"<br>")
+            }
+            //正则表达式的修饰符
+            //修饰符i代表忽略匹配结果的大小写 g表示全局搜索，多次匹配
+            var str1="Linuxand php ,aaa,\n,LINUXlinux and lamp";
+            var pattern5=/linux/ig;
+            var strArr1=str1.match(pattern5);
+            document.write("符合条件的如下：<br>")
+            for(i=0;i<strArr1.length;i++){
+                document.write(strArr1[i]+"<br>")
+            }
+            //换行符 m
+            var pattern6=/^linux/igm; //把每一行中以linux开头的字符匹配出来
+            var strArr2=str1.match(pattern6);
+            document.write("符合条件的如下：<br>")
+            for(i=0;i<strArr2.length;i++){
+                document.write(strArr2[i]+"<br>")
+            }
+
+            //贪婪模式 以b开头和结束，<b>.*</b> 默认模式是不匹配换行
+            //懒惰模式 在贪婪模式下改动 <b>.*?</b> 从字符串左边开始匹配
         }
     </script>
 </head>
