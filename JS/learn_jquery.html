@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery学习</title>
+    <script src="jslib/jquery-1.12.0.min.js"></script>
+<!--    jQuery基本语法-->
+<!--    $(selector).action()-->
+<!--    jQuery选择器-->
+<!--    1.基本选择器-->
+<!--    1.1元素选择器-->
+<!--    如$('p')可以选中网页中所有p元素-->
+<!--    1.2ID选择器-->
+<!--    如<p id="myId">hello</p>,$('#myId')-->
+<!--    1.3类选择器-->
+<!--    如<p class="myId">hello</p>,$('.myId'),又如$('p.myId')选择所有p元素类名为myId的-->
+<!--    1.4并列选择器-->
+<!--    $('#my,p,.left')选中页面中id为my的第一个元素，所有p元素以及所有class属性为left的元素-->
+<!--    2.层次选择器-->
+<!--    2.1祖先后代选择器-->
+<!--    祖先后代选择器中祖先选择符和后代选择符之间使用空格隔开，不限制嵌套的层次数;$('.left p') or $('form input')-->
+<!--    2.2父子选择器-->
+<!--    父子选择器的父元素与子元素用>隔开，前后元素的嵌套关系只能是一层，$('#myId>li')-->
+<!--    2.3前后选择器-->
+<!--    前后选择器可以选中某元素的下一个同级兄弟元素，对同级的元素起作用，前后元素用+号隔开 如$('#my+img')-->
+<!--    2.4兄弟选择器-->
+<!--    用于选择某元素的所有兄弟元素，如$('#my~img')是选择id为my的元素后所有同级别的img元素-->
+<!--    3过滤器-->
+<!--    3.1基本过滤器-->
+<!--    :first匹配找到的第一个元素; :last匹配找到的最后一个元素; :not(selector)去除所有与给定选择器匹配的元素; :even匹配所有索引值为偶数的元素，-->
+<!--    如$('tr:even'); :odd匹配所有索引值为奇数的元素，如$('tr:odd'); :eq(index)匹配一个给定索引值得元素; :gt(index)匹配所有大于索引值的元素;-->
+<!--    :lt(index)匹配所有小于给定索引值的元素; :header匹配所有标题; :animated匹配所有正在执行动画效果的元素-->
+<!--    3.2内容过滤器-->
+<!--    :contains(text)匹配包含指定文本的元素-->
+<!--    :empty()匹配所有不包含子元素或文本的空元素-->
+<!--    :has(selector)匹配含有选择器所匹配的元素的元素-->
+<!--    :parent()匹配含有子元素或者文本的元素，与:empty()相反-->
+<!--    3.3可见性过滤器-->
+<!--    根据元素的可见性进行选择，:hidden和:visible。其中:hidden不仅包含样式属性display为none的元素，也包含文本隐藏域。visible匹配一切所有可见的元素-->
+<!--    3.4属性过滤器-->
+<!--    [attribute]匹配包含给定属性的元素-->
+<!--    [attribute=value]匹配包含给定属性为特定值的元素-->
+<!--    [attribute!=value]匹配包含给定属性不等于特定值的元素-->
+<!--    [attribute^=value]匹配包含给定属性以特定值开头的元素-->
+<!--    [attribute$=value]匹配包含给定属性以特定值结尾的元素-->
+<!--    [attribute*=value]匹配包含给定属性包含特定值的元素-->
+<!--    [attributeFilter1][attributeFilter2]...复合属性选择器，匹配属性同时满足多个条件的元素-->
+<!--    3.5子元素过滤器-->
+<!--    :first-child获取第一个元素-->
+<!--    :last-child获取最后一个元素-->
+<!--    :nth-child(index|even|eq|odd)通过相关指数获取子元素-->
+<!--    :only-child获取子元素唯一的元素-->
+    <script>
+        $(document).ready(function (e){ //$()是jQuery缩写，可以再DOM中搜索与指定的选择器相匹配的元素，并创建一个引用该元素的对象
+            alert("hello jQuery World!");
+            $('p').click(function (){
+                // $(this).hide(); //隐藏
+                $(this).html("嗨"); //替换文本
+            });
+            $('button').click(function (){
+                $('div:contains(ha)').css('backgroundColor','red');
+                // $('div:parent').css('backgroundColor','black');
+                $('div:empty').css('backgroundColor','yellow');
+                $('div:has(a)').css('backgroundColor','pink');
+
+            });
+        });
+    </script>
+    <style>
+        div{
+            width: 300px;
+            height: 50px;
+            border: 1px solid red;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>点击我，我会自动消失</p>
+    <button>显示效果</button>
+    <div>hahah</div>
+    <div>heihei</div>
+    <div></div>
+    <div><a href="http://www.baidu.com">content</a></div>
+</body>
+</html>
