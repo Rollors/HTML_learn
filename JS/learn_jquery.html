@@ -64,6 +64,17 @@
                 $('div:has(a)').css('backgroundColor','pink');
 
             });
+            $('a[title]').css({
+                'color':'#FF9600',
+                'font-size':'12px',
+                'text-decoration':'none' //下划线样式
+            });
+            $('#b1').click(function (){
+                $('div:visible').css("background",'red');
+            });
+            $('#b2').click(function (){
+                $('div:hidden').show(1000);
+            });
         });
     </script>
     <style>
@@ -82,5 +93,19 @@
     <div>heihei</div>
     <div></div>
     <div><a href="http://www.baidu.com">content</a></div>
+    <a href="#" title="first">第一个包含title</a>
+    <a href="#">第一个不包含title</a>
+    <a href="#" title="second">第二个包含title</a>
+    <a href="#">第二个不包含title</a>
+    <h3>可见性过滤器</h3>
+    <input type="button" value="改变可见div元素的属性" id="b1"/>
+    <input type="button" value="改变不可见元素的属性" id="b2"/>
+    <br/><br/>
+    <div id="one">
+        hello world
+    </div>
+    <div style="display: none;">
+        style的display为none的div
+    </div>
 </body>
 </html>
