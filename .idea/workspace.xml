@@ -27,8 +27,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="219e6b3c-c2e0-4b03-bc67-de8d0c9ae850" name="Default Changelist" comment="jQuery学习">
-      <change beforePath="$PROJECT_DIR$/JS/learn_jquery.html" beforeDir="false" afterPath="$PROJECT_DIR$/JS/learn_jquery.html" afterDir="false" />
+    <list default="true" id="219e6b3c-c2e0-4b03-bc67-de8d0c9ae850" name="Default Changelist" comment="jQuery选择器与过滤器">
+      <change afterPath="$PROJECT_DIR$/JS/JQ_guanliweb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/jQDOM.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PycharmProject" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -129,7 +131,12 @@
       <workItem from="1606371841891" duration="4418000" />
       <workItem from="1606442343800" duration="2913000" />
       <workItem from="1606455204745" duration="10162000" />
-      <workItem from="1606726050105" duration="957000" />
+      <workItem from="1606726050105" duration="2324000" />
+      <workItem from="1606738479788" duration="1282000" />
+      <workItem from="1606812039288" duration="1453000" />
+      <workItem from="1608455374722" duration="67000" />
+      <workItem from="1608468119270" duration="2379000" />
+      <workItem from="1608552308630" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="CSS样式">
       <created>1604633866864</created>
@@ -250,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606465314652</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="jQuery选择器与过滤器">
+      <created>1606727124946</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1606727124946</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,17 +297,18 @@
     <MESSAGE value="正则化学习" />
     <MESSAGE value="表单验证" />
     <MESSAGE value="jQuery学习" />
-    <option name="LAST_COMMIT_MESSAGE" value="jQuery学习" />
+    <MESSAGE value="jQuery选择器与过滤器" />
+    <option name="LAST_COMMIT_MESSAGE" value="jQuery选择器与过滤器" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="66" key="#daf" timestamp="1604720253861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="646" y="66" key="#daf/0.0.1920.1040@0.0.1920.1040" timestamp="1604720253861" />
-    <state x="687" y="219" key="FileChooserDialogImpl" timestamp="1604720718625">
+    <state x="687" y="219" key="FileChooserDialogImpl" timestamp="1607082980792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="687" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604720718625" />
+    <state x="687" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607082980792" />
     <state width="1895" height="229" key="GridCell.Tab.0.bottom" timestamp="1604720719640">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -314,10 +329,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="477" y="227" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604648692341" />
-    <state x="585" y="239" key="Vcs.Push.Dialog.v2" timestamp="1606465317352">
+    <state x="585" y="239" key="Vcs.Push.Dialog.v2" timestamp="1606727140430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606465317352" />
+    <state x="585" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606727140430" />
     <state x="623" y="225" width="840" height="678" key="search.everywhere.popup" timestamp="1606726542660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

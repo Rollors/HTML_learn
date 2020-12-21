@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用jQuery管理页面元素</title>
+    <script src="jslib/jquery-1.12.0.min.js"></script>
+<!--    after() 在选择的元素之后插入内容-->
+<!--    append() 在选择的源集合中的元素结尾插入内容-->
+<!--    appendTo() 向目标结尾插入选择的元素集合中的元素-->
+<!--    before() 在选择的元素之前插入内容-->
+<!--    insertAfter() 把选择的元素插入到另一个指定元素的后面-->
+<!--    insertBefore() 把选择的元素插入到另一个指定元素的前面-->
+<!--    prepend() 向选择的元素集合中元素的开头插入内容-->
+<!--    prependTo() 向目标开头插入选择的元素集合-->
+<!--    replaceAll() 用匹配的元素替换所有匹配到的元素-->
+<!--    replaceWith() 用新内容替换匹配的内容-->
+<!--    wrap() 把选择的元素用指定的内容包裹起来-->
+<!--    wrapAll() 把所有匹配元素用指定内容包裹起来-->
+<!--    wrapInner() 把每一个匹配元素的子元素使用指定的内容包裹起来-->
+<!--    remove() 删除匹配元素及其子元素-->
+<!--    empty() 删除匹配元素的子元素-->
+    <script>
+        $(document).ready(function () {
+            $('button').click(function (){
+                $('p').eq(0).after("<p>这是原始第一个段落后插入元素</p>");
+                $('p').eq(2).before("<p>这是原始第二个段落前插入元素</p>");
+                $('p').eq(3).replaceWith("<p>这是原始第二个段落内容修改</p>");
+                $('p').eq(4).empty();
+                //eq()方法时在选中元素集合内选中第几个元素
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>DOM操作测试</button>
+    <p>这是原始第一个段落</p>
+    <p>这是原始第二个段落</p>
+    <p>这是原始第三个段落</p>
+</body>
+</html>

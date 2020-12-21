@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ的DOM</title>
+    <script src="jslib/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+           //修改元素的内容
+           $('button').click(function (){
+               var newContent=$('#userInput').val(); //用于返回或设置表单中字段的值
+               $('ul li:first-child').html(newContent);//用于返回或设置元素的内容
+               $('ul li:last-child').text(newContent);//用于返回或设置元素的文本内容
+           });
+           var color=new Array('blue','red','pink','green');
+           //each匹配所选元素的所有
+           $('li').each(function (index){
+               this.style.color=color[index];
+           });
+           //修改元素的属性
+           function autoPlay(){
+               var index=0;
+
+               function changeImage(){
+                   index=(index+1)%5
+                   $('#box img').attr("src","image/"+index+".jpg");
+               }
+               timer=setInterval(changeImage,1000)
+           }
+           autoPlay();
+           $('div').hover(function (){
+               clearInterval(timer)
+           },autoPlay)
+
+        });
+    </script>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="userInput">
+    <button>修改元素内容</button>
+    <ul>
+        <li>音乐</li>
+        <li>羽毛球</li>
+        <li>足球</li>
+        <li>篮球</li>
+    </ul>
+    <div id="box">
+        <img src="./image/0.jpg" alt="">
+    </div>
+</body>
+</html>
