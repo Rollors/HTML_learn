@@ -27,9 +27,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="219e6b3c-c2e0-4b03-bc67-de8d0c9ae850" name="Default Changelist" comment="jQuery选择器与过滤器">
-      <change afterPath="$PROJECT_DIR$/JS/JQ_guanliweb.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS/jQDOM.html" afterDir="false" />
+    <list default="true" id="219e6b3c-c2e0-4b03-bc67-de8d0c9ae850" name="Default Changelist" comment="利用jQuery管理页面元素">
+      <change afterPath="$PROJECT_DIR$/JS/event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/mana_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/qq_friend_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +51,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1js2yn8fSCd28GC18oJHkIXfaYW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -136,7 +140,11 @@
       <workItem from="1606812039288" duration="1453000" />
       <workItem from="1608455374722" duration="67000" />
       <workItem from="1608468119270" duration="2379000" />
-      <workItem from="1608552308630" duration="1883000" />
+      <workItem from="1608552308630" duration="2239000" />
+      <workItem from="1608895551433" duration="3273000" />
+      <workItem from="1608986085339" duration="1311000" />
+      <workItem from="1609156206460" duration="2922000" />
+      <workItem from="1609590869973" duration="1290000" />
     </task>
     <task id="LOCAL-00001" summary="CSS样式">
       <created>1604633866864</created>
@@ -264,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606727124946</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="利用jQuery管理页面元素">
+      <created>1608555728001</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608555728001</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +313,8 @@
     <MESSAGE value="表单验证" />
     <MESSAGE value="jQuery学习" />
     <MESSAGE value="jQuery选择器与过滤器" />
-    <option name="LAST_COMMIT_MESSAGE" value="jQuery选择器与过滤器" />
+    <MESSAGE value="利用jQuery管理页面元素" />
+    <option name="LAST_COMMIT_MESSAGE" value="利用jQuery管理页面元素" />
   </component>
   <component name="WindowStateProjectService">
     <state x="646" y="66" key="#daf" timestamp="1604720253861">
@@ -329,10 +345,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="477" y="227" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604648692341" />
-    <state x="585" y="239" key="Vcs.Push.Dialog.v2" timestamp="1606727140430">
+    <state x="585" y="239" key="Vcs.Push.Dialog.v2" timestamp="1608555733596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606727140430" />
+    <state x="585" y="239" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608555733596" />
     <state x="623" y="225" width="840" height="678" key="search.everywhere.popup" timestamp="1606726542660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

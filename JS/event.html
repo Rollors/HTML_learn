@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery事件</title>
+<!--    $('选择器').click() &nbsp;鼠标单击事件，参数可选（data,function）<br/>-->
+<!--    $('选择器').dbclick() &nbsp;鼠标双击事件，参数可选（data,function）<br/>-->
+<!--    $('选择器').mousedown()/mouseup() &nbsp;鼠标按下/弹起触发事件<br/>-->
+<!--    $('选择器').mousemove() &nbsp;鼠标移动触发事件<br/>-->
+<!--    $('选择器').mouseover()/mouseout() &nbsp;鼠标移入/移出触发事件<br/>-->
+<!--    $('选择器').mouseenter()/mouseleave() &nbsp;鼠标进入/离开触发事件<br/>-->
+<!--    $('选择器').hover(func1,func2) &nbsp;鼠标移入调用func1，鼠标移出调用func2<br/>-->
+<!--    $('选择器').focusin() &nbsp;鼠标聚焦到该元素时触发事件<br/>-->
+<!--    $('选择器').focuout() &nbsp;鼠标失去焦点时触发事件<br/>-->
+<!--    $('选择器').focus()/blur() &nbsp;鼠标聚焦/失去焦点触发事件(不支持冒泡)<br/>-->
+<!--    $('选择器').change() &nbsp;表单元素发生改变时触发事件<br/>-->
+<!--    $('选择器').select() &nbsp;文本元素被选中时触发事件<br/>-->
+<!--    $('选择器').submit() &nbsp;表单提交动作触发事件<br/>-->
+<!--    $('选择器').keydown()/keyup() &nbsp;键盘按键按下/弹起触发事件<br/>-->
+<!--    $('选择器').keypress() &nbsp;键盘按下过程中触发事件<br/>-->
+    <style>
+        #mydiv{
+            background: #ccffff;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        p{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #ff3300;
+        }
+    </style>
+    <script src="jslib/jquery-1.12.0.min.js"></script>
+    <script>
+        $(function (){
+            $('#btn').click(function (){
+                $('#mydiv').mousedown(function (event){
+                    var offset=$('#mydiv').offset();
+                    x1=event.clientX-offset.left;
+
+                    y1=event.clientY-offset.top;
+                    $('#mydiv').mousemove(function (event){
+                        $('#mydiv').css("left",(event.clientX-x1)+'px');
+                        $('#mydiv').css("top",(event.clientY-y1)+'px');
+                        //查看移动值
+                        $('p').html(offset.left)
+
+                    });
+                    $('#mydiv').mouseup(function (event){
+                        $('#mydiv').unbind("mousemove");
+                    });
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">鼠标拖动</button>
+    <div id="mydiv"></div>
+    <p></p>
+</body>
+</html>

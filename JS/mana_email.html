@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮件列表管理</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="jslib/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(
+            $(function (){
+                $('#selectBtn').click(function (){
+                    $("input[name=select]").prop('checked',true)
+                });
+                $('#selectCancle').click(function (){
+                    $("input[name=select]").prop('checked',false)
+                });
+                $('#notselect').click(function (){
+                   $("input[name=select]").each(function (index,element){
+                       $(this).prop("checked",!$(this).prop('checked'))
+                   })
+                });
+                $('#delBtn').click(function (){
+                   $('input[name=select]').each(function (){
+                       if($(this).prop('checked'))
+                           $(this).parent().parent().empty()  //remove()也行
+                   })
+                });
+                //bind(type,[data,],function)为一个匹配元素的特定事件绑定事件处理函数
+                $('#btn').bind('click',function (){
+                    $('p#ca').slideToggle();
+                });
+                //右击网页不会出现快捷键
+                $(document).bind('contextmenu',function (){
+                    return(false);
+                })
+                //delegate(childSelector,eventType,function)对指定元素的特定子元素增加一个或多个事件处理
+                listArr=new Array('音乐','排球','羽毛球','篮球','游泳')
+                index=0
+                $('ul').delegate('li','click',function (){
+                    $(this).append('<li>'+listArr[index]+"</li>")
+                    index++;
+                    index%=5
+                })
+
+            })
+
+        )
+    </script>
+</head>
+<body>
+    <div id="box">
+        <table width="400" border="1">
+            <tr>
+                <td>状态</td>
+                <td>发件人</td>
+                <td>主题</td>
+            </tr>
+            <tr>
+                <td><input name="select" type="checkbox" value="select"></td>
+                <td>王者归来</td>
+                <td>羽毛球服装</td>
+            </tr>
+            <tr>
+                <td><input name="select" type="checkbox" value="select"></td>
+                <td>天下</td>
+                <td>下去</td>
+            </tr>
+            <tr>
+                <td><input name="select" type="checkbox" value="select"></td>
+                <td>法国</td>
+                <td>发过誓的</td>
+            </tr>
+            <tr>
+                <td><input name="select" type="checkbox" value="select"></td>
+                <td>阿发</td>
+                <td>发生</td>
+            </tr>
+        </table>
+        <button id="selectBtn">全选</button>
+        <button id="selectCancle">取消</button>
+        <button id="notselect">反选</button>
+        <button id="delBtn">删除</button>
+    </div>
+    <p id="ca">这是一段文字</p>
+    <button id="btn">请点击这里</button>
+    <p>您右击网页，将不会弹出右键快捷键</p>
+    <ul>
+        <li>足球</li>
+    </ul>
+</body>
+</html>
