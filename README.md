@@ -68,6 +68,11 @@ Javascript 从交互角度，提升用户体验
             *   文本域 `<textarea name="" id="" cols="30" rows="10"></textarea>` --rows表示行；cols表示列数；
 ***
 **_CSS样式 --父层的样式被子层继承_**
+*   CSS浏览器前缀 
+    *   -webkit//Webkit内核，例如谷歌和Safari浏览器
+    *   -moz//Gecko内核，例如火狐浏览器
+    *   -o//Presto内核，例如Opera浏览器
+    *   -ms//Trident内核，例如IE浏览器
 *   CSS概述
     *   层叠样式表(CSS):随着技术的发展，将网页的内容与样式相分离，便于修改，相同的内容可以给予不同的样式；
 *   CSS语法

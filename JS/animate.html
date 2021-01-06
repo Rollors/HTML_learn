@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复杂动画</title>
+    <script src="jslib/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#box').click(function () {
+                $(this).animate({left:"100px",height:"100px",width:"100px",opacity:"0.5"},1000)
+                        .animate({left:"+=100px",height:"200px",width:"200px",opacity:"-=0.1"},1000)
+                        .animate({left:"+=100px",opacity:"-=0.1"},1000,function (){
+                            $(this).css('background','blue')
+                        })
+            })
+            $('button').click(function (){
+                $(this).next().stop(true,false)
+            })
+        })
+    </script>
+    <style>
+        #box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: red;
+            cursor: pointer; /*指针样式*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>停止</button>
+        <div id="box"></div>
+
+    </div>
+</body>
+</html>

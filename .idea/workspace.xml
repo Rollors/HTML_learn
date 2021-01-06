@@ -16,11 +16,6 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
@@ -28,10 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="219e6b3c-c2e0-4b03-bc67-de8d0c9ae850" name="Default Changelist" comment="利用jQuery管理页面元素">
-      <change afterPath="$PROJECT_DIR$/JS/event.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS/mana_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS/qq_friend_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/animate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/donghuatexiao.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/css_ol_ul.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/css_ol_ul.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +141,8 @@
       <workItem from="1608986085339" duration="1311000" />
       <workItem from="1609156206460" duration="2922000" />
       <workItem from="1609590869973" duration="1290000" />
+      <workItem from="1609899223463" duration="3095000" />
+      <workItem from="1609918445601" duration="3451000" />
     </task>
     <task id="LOCAL-00001" summary="CSS样式">
       <created>1604633866864</created>

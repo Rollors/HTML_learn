@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画特效--显示与隐藏 </title>
+    <script src="jslib/jquery-1.12.0.min.js"></script>
+    <style>
+        p{
+            width: 1620px;
+            height: 20px;
+            line-height: 20px;
+            /*text-align: center;*/
+            background-color: pink;
+            color: #000000;
+
+        }
+    </style>
+    <script>
+        $(document).ready(function (){
+            $('.btn1').click(function (){
+                $('p').show(2000);
+            })
+            $('.btn2').click(function () {
+                $('p').hide(2000);
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>
+        银行家算法（Banker's Algorithm）是一个避免死锁（Deadlock）的著名算法，是由艾兹格·迪杰斯特拉在1965年为T.H.E系统设计的一种避免死锁产生的算法。它以银行借贷系统的分配策略为基础，判断并保证系统的安全运行。
+    </p>
+    <button class="btn1">显示</button>
+    <button class="btn2">隐藏</button>
+</body>
+</html>
